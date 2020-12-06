@@ -1,0 +1,87 @@
+Games
+-
+appid PK int
+name varchar(250)
+release_date date
+language int FK >- Language.languageid
+developer int FK >- Developers.developerid
+publisher int FK >- Publishers.publisherid
+required_age int
+achievements int
+positive_ratings double
+negative_ratings double
+average_playtime double
+median_playtime double
+owners int FK >- Owners.ownersid
+price float 
+website varchar(400)
+support_website varchar(400)
+support_email varchar(400)
+
+Developers
+-
+developerid PK int
+name varchar(300)
+
+Publishers
+-
+publisherid PK int
+name varchar(300)
+
+Language
+-
+languageid PK int
+language varchar(20)
+
+Platforms
+-
+platformid PK int
+name varchar
+
+Categories 
+-
+categorieid PK int
+name varchar(150)
+
+Genres
+-
+genreid PK int
+name varchar(150)
+
+Tags
+-
+tagid PK int
+name varchar(150)
+
+Owners
+-
+ownersid PK int
+range varchar(30)
+
+Game_Platform
+-
+appid PK int FK >- Games.appid
+platformid PK int FK >- Platforms.platformid
+
+Game_Categorie
+-
+appid PK int FK >- Games.appid
+categorieid PK int FK >- Categories.categorieid
+
+Game_Genre
+-
+appid PK int FK >- Games.appid
+genreid PK int FK >- Genres.genreid
+
+Game_Tag
+-
+appid PK int FK >- Games.appid
+tagid PK int FK >- Tags.tagid
+
+
+
+
+
+
+
+

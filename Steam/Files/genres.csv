@@ -1,31 +1,27 @@
-,platform
-0,Action
-1,Indie
-2,Strategy
-3,RPG
-4,Animation & Modeling
-5,Casual
-6,Simulation
-7,Racing
-8,Adventure
-9,Violent
-10,Nudity
-11,Free to Play
-12,Sports
-13,Gore
-14,Massively Multiplayer
-15,Utilities
-16,Design & Illustration
-17,Education
-18,Web Publishing
-19,Sexual Content
-20,Audio Production
-21,Photo Editing
-22,Early Access
-23,Accounting
-24,Video Production
-25,Software Training
-26,
-27,Game Development
-28,Documentary
-29,Tutorial
+genre_id,genre
+1,Action
+2,Indie
+3,Strategy
+4,RPG
+5,Animation & Modeling
+6,Casual
+7,Simulation
+8,Racing
+9,Adventure
+10,Violent
+11,Nudity
+12,Free to Play
+13,Sports
+14,Gore
+15,Massively Multiplayer
+16,Utilities
+17,Design & Illustration
+18,Education
+19,Web Publishing
+20,Sexual Content
+21,Audio Production
+22,Photo Editing
+23,Early Access
+24,Accounting
+25,Video Production
+26,Software Training

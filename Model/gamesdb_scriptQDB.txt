@@ -1,87 +1,80 @@
+
 Games
 -
-appid PK int
+app_id PK int
 name varchar(250)
 release_date date
-language int FK >- Language.languageid
-developer int FK >- Developers.developerid
-publisher int FK >- Publishers.publisherid
+language int FK >- Language.language_id
+developer int FK >- Developers.developer_id
+publisher int FK >- Publishers.publisher_id
 required_age int
 achievements int
-positive_ratings double
-negative_ratings double
-average_playtime double
-median_playtime double
-owners int FK >- Owners.ownersid
-price float 
+positive_ratings decimal
+negative_ratings decimal
+average_playtime decimal
+median_playtime decimal
+owners int FK >- Owners.owners_id
+price decimal 
 website varchar(400)
 support_website varchar(400)
 support_email varchar(400)
 
 Developers
 -
-developerid PK int
+developer_id PK int
 name varchar(300)
 
 Publishers
 -
-publisherid PK int
+publisher_id PK int
 name varchar(300)
 
 Language
 -
-languageid PK int
+language_id PK int
 language varchar(20)
 
 Platforms
 -
-platformid PK int
+platform_id PK int
 name varchar
 
 Categories 
 -
-categorieid PK int
+category_id PK int
 name varchar(150)
 
 Genres
 -
-genreid PK int
+genre_id PK int
 name varchar(150)
 
 Tags
 -
-tagid PK int
+tag_id PK int
 name varchar(150)
 
 Owners
 -
-ownersid PK int
+owners_id PK int
 range varchar(30)
 
 Game_Platform
 -
-appid PK int FK >- Games.appid
-platformid PK int FK >- Platforms.platformid
+app_id PK int FK >- Games.app_id
+platform_id PK int FK >- Platforms.platform_id
 
 Game_Categorie
 -
-appid PK int FK >- Games.appid
-categorieid PK int FK >- Categories.categorieid
+app_id PK int FK >- Games.app_id
+categorie_id PK int FK >- Categories.category_id
 
 Game_Genre
 -
-appid PK int FK >- Games.appid
-genreid PK int FK >- Genres.genreid
+app_id PK int FK >- Games.app_id
+genre_id PK int FK >- Genres.genre_id
 
 Game_Tag
 -
-appid PK int FK >- Games.appid
-tagid PK int FK >- Tags.tagid
-
-
-
-
-
-
-
-
+app_id PK int FK >- Games.app_id
+tag_id PK int FK >- Tags.tag_id

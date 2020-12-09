@@ -64,10 +64,10 @@ Game_Platform
 app_id PK int FK >- Games.app_id
 platform_id PK int FK >- Platforms.platform_id
 
-Game_Categorie
+Game_Category
 -
 app_id PK int FK >- Games.app_id
-categorie_id PK int FK >- Categories.category_id
+category_id PK int FK >- Categories.category_id
 
 Game_Genre
 -

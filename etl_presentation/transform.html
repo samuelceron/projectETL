@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Rodrigo Guarneros">
+    <meta name="Project1" content="Gas Stations v.1.0">
+    <title>Transform</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">
+
+    <!-- Bootstrap core CSS -->
+<link href="/Assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template the heade-->
+    <link href="/album.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+  <div class="collapse bg-dark" id="navbarHeader">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-md-7 py-4">
+          <h4 class="text-white">About</h4>
+          <p class="text-muted">This is the ETL Project for BootCamp DataTec 2020</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container d-flex justify-content-between">
+      <a href="/index.html" class="navbar-brand l-flex align-items-center">
+        <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-house-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M8 3.293l6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+          <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+        </svg>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main role="main">
+
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1>Extract, Transform and Load (ETL)</h1>
+      <p class="leadtext-muted">This project was developed by Beta Team</p>
+      <p>
+        <a href="/index.html" class="btn btn-secondary my-3">Intro</a>
+        <a href="/extract.html" class="btn btn-secondary my-3">Extract</a>
+        <a href="/transform.html" class="btn btn-success my-3">Transform</a>
+        <a href="/load.html" class="btn btn-secondary my-3" >Load</a>
+        <a href="/conclusions.html" class="btn btn-secondary my-3" >Conclusions</a>
+      </p>
+    </div>
+    <strong class="text-author">Carlos Casio, Eduardo Ayala, Samuel Cerón y Rodrigo Guarneros</strong>
+  </section>
+
+<!-- Is responsive (using media queries). The nav must have similar behavior as the screenshots "Navigation Menu" section (notice the background color change). -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+      <a class="navbar-brand text-white" href="/index.html" >ETL</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">    
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Main
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="/index.html">Intro</a>
+                      <a class="dropdown-item" href="/extract.html">Extract</a>
+                      <a class="dropdown-item" href="/transform.html">Transform</a>
+                      <a class="dropdown-item" href="/load.html">Load</a>
+                      <a class="dropdown-item" href="/conclusions.html">Conclusions</a>
+                   </div>
+              </li>
+           </ul>
+      </div>
+  </div>
+</nav>
+
+  <div class="container content">    
+    <div class="row">
+        <div class="col-md-6">
+            <div class="col-md-15">
+              <br>
+                <h3>Transformation process </h3>
+                <hr>
+                <p>In the data transformation stage, a series of rules or functions are applied to the extracted data in order to prepare it for loading into the end target: <b>THE DATABASE</b></p>
+                <p>The key point in this process is the DATABASE NORMALIZATION in order to reduce data redundancy and improve data integrity, among other benefits we'll see in our <a href="/Conclusions.html">conclusions</a>.</p> 
+                <p>At this point the team look for the Third Normal Form (3NF).</p> 
+                <p>For that proposal, we made some basic transformations in python (Jupyter-Notebook):</p>
+                <ul>
+                    <li>First, we eliminate unnecesary columns from the main DataFrame (Games)</li>
+                    <li>Then, for the owners column we create a unique catalogue and replace values with ids</li>
+                    <hr>
+                    <a href="/transform2.html"><img class="img-thumbnail float-left" src="/Resources/t1.jpg" width="90%" alt="eliminate col"></a>
+                    <br>
+                    <br>
+
+                    <li>Second, we cleaned the developer column, as the main developer appears first, we keep the first value and then replace it with id numbers</li>
+                    <li>We created a dictionary and changed text values for id of developers</li>
+                    <li>We applied the same criteria to the columns Publiser, categories and steampspy_tags</li>
+                    <hr>
+                    <div class="thumbnail">
+                        <a href="/transform3.html"><img class="img-thumbnail float-left" src="/Resources/t2.jpg" width="90%" alt="Kaggle"></a>
+                    </div>
+                </ul>            
+            </div>
+        </div>
+        <!--visualization adjustments-->
+        <div class="col-md-6">
+            <div class="col-md-13">
+                <br>
+                <br>
+                <br>
+                <br>
+                <hr>
+                <ul>
+                    <li>Third, for platform we saw there are no many categories for this column</li>
+                <hr>
+            <div class="thumbnail">
+                        <a href="/transform4.html"><img class="img-thumbnail float-left" src="/Resources/t4.jpg" width="90%" alt="Kaggle"></a>
+                    </div>
+                </ul>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <p>Finally, we see the resulting table that will be loaded along with the other ones we created</p> 
+                <h1>The result is a junction table</h1>
+                <p>Games (Main DataFrame)</p>
+                <hr>
+                <div class="thumbnail">
+                            <a href="/transform5.html"><img class="img-thumbnail float-left" src="/Resources/t5.jpg" width="90%" alt="Kaggle"></a>
+                        </div>
+                </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+<footer class="text-muted">
+  <div class="container">
+    <p class="float-right">
+      <a href="#">Back to top</a>
+    </p>
+  </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+</html>

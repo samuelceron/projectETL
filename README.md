@@ -15,6 +15,8 @@ Which we then Extracted and Transformed the data with the Jupyter-Notebook.
 
 So we could finally upload it to PGadmin.
 
+We invite you to know more about our project in this executive visualization: https://samuelceron.github.io/projectETL/etl_presentation/index.html 
+
 Project by: Carlos Casio, Eduardo Ayala, Samuel Cerón y Rodrigo Guarneros
 
 
